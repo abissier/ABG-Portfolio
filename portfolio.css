@@ -1,34 +1,49 @@
-nav {
-   display: none;
+
+:root {
+    --header: Staatliches; 
+    --p: Montserrat;
 }
 
 nav ul {
     list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+   
 }
 
 nav ul li {
     display: inline;
-    float: right;
+    padding: 20px;
+ 
+}
+
+nav a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: var(--p);
 }
 
 header {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
-    height: 500px;
+    height: 400px;
     background-image: url("2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
+    box-shadow: 0px 0px 5px black;
 }
 
 h1 {
-    font-family: Staatliches;
+    font-family: var(--header);
     font-weight: 100;
     font-size: 50px;
     letter-spacing: none;
+    margin-left: 20px;
 }
 
 .specialc {
@@ -36,14 +51,41 @@ h1 {
 }
 
 h3 {
-    font-family: Montserrat;
+    font-family: var(--p);
     align-content: center;
+    margin-left: 20px;
+    margin-top: -20px;
 }
 
-main {
-    
-    animation: pulse 8s infinite;
+.container {
+    display: flex;
+    margin: 1%;
+    padding-right: 15%;
 }
+
+
+section {
+    width: 60%;
+    height: 250px;
+    flex-flow: column wrap;
+}
+
+aside {
+    flex-flow: column;
+    height: 800px;
+    font-family: var(--p);
+}
+
+aside ul {
+    list-style-type: none;
+}
+
+p {
+ font-family: var(--p);
+ animation: pulse 12s infinite;
+ border-left: 4px solid black;
+}
+
 
 @keyframes pulse {
     0% {
