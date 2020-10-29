@@ -19,6 +19,11 @@ nav ul li {
  
 }
 
+nav ul li:hover {
+    transform: scale(1.1);
+}
+
+
 nav a {
     color: black;
     font-weight: bold;
@@ -66,45 +71,106 @@ h3 {
 .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* same things as typing 1fr 1fr 1fr 1fr */
-    grid-auto-rows: minmax(100px, auto); /* stretches box to fill content */
-    grid-gap: 1em; /*gap for column and row */
+    grid-template-rows: repeat(4, 1fr); 
     
 }
 
 .sidebar {
     grid-column: 1/1;
     grid-row: 1/4;
-    align-items: start;
 }
 
 .sidebar ul{
     list-style: none;
 }
 
+.sidebar ul li {
+    padding-bottom: 40px;
+}
+
+.sidebar ul li:hover {
+    text-shadow: 0 0 3px black;
+}
+
 .content1 {
+    display: flex;
     grid-column: 2/5;
     grid-row: 1/1;
+    align-items: center;
    
 }
 
 .content2 {
     grid-column: 2/5;
     grid-row: 2/2;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap:1em;
-    grid-auto-rows: minmax(100px, auto);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+
+.project {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center; 
+}
+
+.project h4 {
+    display: flex;
+    size: 16px;
+    background-color: rgba(0, 0, 0, 0.301);
+    align-items: flex-end;
+}
+
+
+.p1 {
+    background-image: url("code.jpg");
+    background-position: 50% 50%;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+
+.p2 {
+    background-image: url("password.jpg");
+    background-position: 50% 50%;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+
+.p3 {
+    background-image: url("quiz.jpg");
+    background-position: 50% 50%;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;     
 }
 
 .content3 {
     grid-column: 2/5;
     grid-row: 3/3;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap:1em;
-    grid-auto-rows: minmax(100px, auto);
-    align-self: end;
+    display: flex;
+    justify-content: left;
 }
+
+.content3 ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.content3 ul li {
+    display: inline;
+    padding: 20px;
+ 
+}
+
 
 .content4 {
     grid-column: 2/5;
