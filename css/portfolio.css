@@ -5,7 +5,6 @@
 }
 
 /* nav bar flex styling */
-
 nav ul {
     list-style-type: none;
     display: flex;
@@ -35,7 +34,7 @@ header {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    height: 400px;
+    height: 300px;
     background-image: url("../images/2.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -49,7 +48,7 @@ header {
     padding-right: 20px;
 }
 
-img {
+#circle-img{
     border-radius: 50%;
     width: 100px;
     box-shadow: 0px 0px 3px black;
@@ -69,6 +68,13 @@ h1 {
 
 .specialc {
     font-size: 80px;
+}
+
+h2 {
+    font-family: var(--header);
+    align-content: center;
+    font-size: 40px;
+    margin-left: 20px;
 }
 
 h3 {
@@ -103,30 +109,27 @@ main {
 /* rows created w in main */
 .row1 {
     display: flex;
-    width: 100%;
+    width: 90%;
     height: 10%;
 }
 
 .row2 {
     display: flex;
-    width: 100%;
+    width: 90%;
     height: 50%;
 }
 
-
 .row3 {
     display: flex;
-    width: 100%;
+    width: 90%;
     height: 10%;
 }
 
-
 .row4 {
     display: flex;
-    width: 100%;
+    width: 70%;
     height: 30%;
 }
-
 
 /*about me section positioning in main*/
 .about {
@@ -144,24 +147,13 @@ main {
     height: 100%;
 }
 
-/*href project overlay effects*/
-.projects a {
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: 500;
-    font-family: var(--p);
-    text-decoration: none;
-    color: black; 
-}
-
 /*positioning first project to be larger than otherp*/
 .mainp {
     display: block;
     height: 50%;
     width: 100%;
-    border: 1px solid black;
 }
+
 /* positiong smaller projects*/
 .otherp {
     display: flex;
@@ -183,47 +175,46 @@ main {
     display: block;
     height: 100%;
     width: 100%;
-    background-image: url("../images/code.jpg");
+    background-image: url("../images/music.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project2 {
+    display: block;
+    height: 50%;
+    width: 100%;
+    background-image: url("../images/password.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project3 {
+    display: block;
+    height: 50%;
+    width: 100%;
+    background-image: url("");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.project2 {
-    border: 1px solid black;
-    display: block;
-    height: 50%;
-    width: 100%;
-    background-image: url("../images/password.jpg");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.project3 {
-    border: 1px solid black;
-    display: block;
-    height: 50%;
-    width: 100%;
-    background-image: url("../images/quiz.jpg");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
 .project4 {
-    border: 1px solid black;
     display: block;
     height: 50%;
     width: 100%;
-    background-image: url("../images/planner.jpg");
+    background-image: url("../images/weather.png");
     background-position: 50% 50%;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .project5 {
-    border: 1px solid black;
     display: block;
     height: 50%;
     width: 100%;
@@ -232,26 +223,48 @@ main {
     background-size: contain;
     background-repeat: no-repeat;
 }
+/* .overlay {
+    position: absolute;
+    margin: 10px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: darkgoldenrod;
+} */
+/*   
+  .project1:hover .overlay, 
+  .project2:hover, 
+  .project3:hover, 
+  .project4:hover,
+  .project5:hover{
+    opacity: .75;
+  }
+  
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  } */
 
 .project1:hover, 
 .project2:hover, 
 .project3:hover, 
 .project4:hover,
 .project5:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     border: none;
 }
-
-/* makes project images clickable */
-.refactor,
-.password,
-.quiz,
-.planner,
-.dashboard {
-    height: 100%;
-    width: 100%;
-}
-
 
 /* contact info */
 .contact {
@@ -261,23 +274,17 @@ main {
     align-items: center;
 }
 
-.contact a {
-        font-size: 20px;
-        font-family: var(--p);
-        color: black;
-        text-decoration: none;
+img {
+    width: 100px;
 }
 
 .resume {
     display: flex;
     justify-content: center;
     width: 75%;
-    animation: pulse 5s infinite;
 }
 
-
 /* CSS Media Queries */
-
 @media screen and (max-width:650px) {
       .main {
         display: flex;
@@ -286,15 +293,5 @@ main {
     } 
     .sidebar {
         display: none;
-    }
-}
-
-@keyframes pulse {
-    0% {
-        background-color: #4bcea2;
-    }
-
-    100% {
-        background-color: #36558d;
     }
 }
