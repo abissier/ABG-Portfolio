@@ -12,7 +12,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-  width: 100%;
+    width: 100%;
 }
 
 nav a {
@@ -23,7 +23,6 @@ nav a {
     text-decoration: none;
     font-family: var(--p);
 }
-
 
 nav a:hover {
     transform: scale(1.1);
@@ -133,6 +132,7 @@ hr {
     display: flex;
     width: 75%;
     height: 100%;
+    padding-left: 30px;
     align-items: center;
     font-family: var(--p);
 }
@@ -239,9 +239,9 @@ hr {
     margin: 10px;
   }
 
-  .text a {
-      text-decoration: none;
-  }
+.text a {
+    text-decoration: none;
+}
 
 /* contact info */
 .contact {
@@ -258,9 +258,11 @@ hr {
     font-family: var(--header);
 }
 
+.contact-links:hover {
+    transform: scale(1.1);
+}
 
 /* CSS Media Queries */
-
 @media screen and (max-width:800px) {
 
       .row2,
