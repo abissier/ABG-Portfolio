@@ -1,29 +1,31 @@
-
 :root {
     --header: Staatliches; 
     --p: Montserrat;
 }
 
-/* nav bar flex styling */
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-}
+html {
+    scroll-behavior: smooth;
+  }
 
-nav ul li {
-    display: inline;
-    padding: 20px;
+/* nav bar flex styling */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  width: 100%;
 }
 
 nav a {
     color: black;
     font-weight: bold;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
     font-family: var(--p);
 }
 
-nav ul li:hover {
+
+nav a:hover {
     transform: scale(1.1);
 }
 
@@ -32,14 +34,12 @@ header {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
     height: 300px;
-    background-image: url("../images/2.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    box-shadow: 0px 0px 5px black;
+    background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 81%);
+    box-shadow: 0px 0px 5px rgb(109, 157, 228);
 }
 
 .avatar {
@@ -52,10 +52,6 @@ header {
     border-radius: 50%;
     width: 100px;
     box-shadow: 0px 0px 3px black;
-}
-
-img:hover {
-    transform: scale(1.2);
 }
 
 h1 {
@@ -106,29 +102,30 @@ main {
     text-shadow: 0 0 3px black;
 }
 
+hr {
+    border: none;
+    height: 5px;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 81%);
+}
+
 /* rows created w in main */
 .row1 {
     display: flex;
     width: 90%;
-    height: 10%;
+    height: 20%;
 }
 
 .row2 {
     display: flex;
     width: 90%;
-    height: 50%;
+    height: 60%;
 }
 
 .row3 {
     display: flex;
     width: 90%;
-    height: 10%;
-}
-
-.row4 {
-    display: flex;
-    width: 70%;
-    height: 30%;
+    height: 20%;
 }
 
 /*about me section positioning in main*/
@@ -137,6 +134,7 @@ main {
     width: 75%;
     height: 100%;
     align-items: center;
+    font-family: var(--p);
 }
 
 /* project section positioning in main */
@@ -175,68 +173,75 @@ main {
     display: block;
     height: 100%;
     width: 100%;
-    margin: 5px;
-    background-image: url("../images/music.png");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 5px;  
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(102, 96, 96, 0.19);
     /* transition-delay: 2s;
     transition-duration: 2s; */
 }
 
-.project2 {
-    display: block;
-    height: 50%;
-    width: 100%;
-    margin: 5px;
-    background-image: url("../images/password.png");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.project3 {
-    display: block;
-    height: 50%;
-    width: 100%;
-    margin: 5px;
-    background-image: url("../images/workday.png");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.project4 {
-    display: block;
-    height: 50%;
-    width: 100%;
-    margin: 5px;
-    background-image: url("../images/weather.png");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
+.project2,
+.project3,
+.project4,
 .project5 {
     display: block;
     height: 50%;
     width: 100%;
-    background-image: url("../images/hangman.png");
-    background-position: 50% 50%;
     margin: 5px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(102, 96, 96, 0.19);
+}
+/* overlay */
+.project1,
+.project2,
+.project3,
+.project4,
+.project5 {
+    position: relative;
+    width: 100%;
 }
 
-.project1:hover, 
-.project2:hover, 
-.project3:hover, 
-.project4:hover,
-.project5:hover {
-    box-shadow: inset 0 0 0 100vw #59b8c259;
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    transition: .5s ease;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.project1:hover .middle,
+.project2:hover .middle,
+.project3:hover .middle,
+.project4:hover .middle,
+.project5:hover .middle {
+    opacity: 0.8;
     cursor: pointer;
 }
+
+.text {
+    background-color: #94bbe9;
+    color: black;
+    font-size: 16px;
+    font-family: var(--header);
+    padding: 16px 32px;
+    margin: 10px;
+  }
+
+  .text a {
+      text-decoration: none;
+  }
 
 /* contact info */
 .contact {
@@ -246,23 +251,39 @@ main {
     align-items: center;
 }
 
-img {
-    width: 100px;
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--header);
 }
 
-.resume {
-    display: flex;
-    justify-content: center;
-    width: 75%;
-}
 
 /* CSS Media Queries */
-@media screen and (max-width:650px) {
-      .main {
+
+@media screen and (max-width:800px) {
+
+      .row2,
+      .projects,
+      .mainp,
+      .otherp,
+      .col,
+      .contact {
         display: flex;
         flex-direction: column;
         width: 100%;
     } 
+
+     main,
+    .row1,
+    .row2,
+    .row3 {
+        height: auto;
+        padding: 5px;
+        margin: 2px;
+    }
+
+    nav,
     .sidebar {
         display: none;
     }
