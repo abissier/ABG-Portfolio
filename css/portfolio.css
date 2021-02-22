@@ -35,10 +35,10 @@ header {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 300px;
+    height: 250px;
     background: rgb(238,174,202);
     background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 81%);
-    box-shadow: 0px 0px 5px rgb(109, 157, 228);
+    box-shadow: 0px 0px 10px rgb(109, 157, 228);
 }
 
 .avatar {
@@ -82,22 +82,13 @@ h3 {
 main {
     display: flex;
     width: 100%;
-    height: 1500px;
+    height: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* positioning of sidebar in main*/
-.sidebar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    width: 25%;
-}
-
-.sidebar:hover {
+a:hover {
     text-shadow: 0 0 3px black;
 }
 
@@ -111,29 +102,36 @@ hr {
 /* rows created w in main */
 .row1 {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     width: 90%;
-    height: 20%;
+    height: auto;
+    margin-top: 20px;
 }
 
 .row2 {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 90%;
-    height: 60%;
+    height: auto;
+    margin-top: 20px;
 }
 
 .row3 {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     width: 90%;
-    height: 20%;
+    height: auto;
+    margin-top: 20px;
 }
 
 /*about me section positioning in main*/
 .about {
-    display: flex;
-    width: 75%;
-    height: 100%;
-    padding-left: 30px;
-    align-items: center;
+    width: 85%;
     font-family: var(--p);
 }
 
@@ -141,8 +139,9 @@ hr {
 .projects {
     display: flex;
     flex-direction: column;
-    width: 75%;
-    height: 100%;
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 10px 18px rgb(109, 157, 228);
 }
 
 /*positioning first project to be larger than otherp*/
@@ -173,10 +172,6 @@ hr {
     display: block;
     height: 100%;
     width: 100%;
-    margin: 5px;  
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(102, 96, 96, 0.19);
-    /* transition-delay: 2s;
-    transition-duration: 2s; */
 }
 
 .project2,
@@ -186,8 +181,6 @@ hr {
     display: block;
     height: 50%;
     width: 100%;
-    margin: 5px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(102, 96, 96, 0.19);
 }
 /* overlay */
 .project1,
@@ -200,10 +193,10 @@ hr {
 }
 
 .image {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
     transition: .5s ease;
     backface-visibility: hidden;
 }
@@ -237,7 +230,7 @@ hr {
     font-family: var(--header);
     padding: 16px 32px;
     margin: 10px;
-  }
+}
 
 .text a {
     text-decoration: none;
@@ -245,7 +238,7 @@ hr {
 
 /* contact info */
 .contact {
-    width: 75%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
